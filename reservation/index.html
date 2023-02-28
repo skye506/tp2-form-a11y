@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Réservation | Auberge du jacana africain</title>
+
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <p><img src="../images/logo-jacana.png" alt=""></p>
+            <p class="titre">Auberge du jacana africain</p>
+        </a>
+        <!-- Ajouter un menu : Accueil, Historique, Région, Contact, Réservation -->
+        <p> <a href="../index.html">accueil</a> | <a href="index.html">réservation</a>
+    </header>
+
+    <main>
+        <h1>Réservation</h1>
+        <form id="reservation-form" action="reservation.html">
+            <div class="form-section">
+                <h2>1. Vérifier la disponibilité</h2>
+                <label for="date-arrivee">Date d'arrivée :</label>
+                <input type="date" id="date-arrivee" name="date-arrivee">
+
+                <label for="date-depart">Date de départ :</label>
+                <input type="date" id="date-depart" name="date-depart">
+
+                <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
+                <p id="availability-message"></p>
+            </div>
+
+            <div class="form-section">
+                <h2>2. Nombre de personnes </h2>
+                <label>Adultes (maximum 4):</label>
+                <input id="adultes" name="adultes">
+
+                <label>Enfants (maximum 5):</label>
+                <input id="enfants" name="enfants">
+
+                <p>
+                    Notes: <br>
+                    1. la chambre familiale peut loger jusqu'à 6 personnes<br>
+                    2. si vous avez besoin de louer plusieurs chambres, <a href="">contactez-nous directement</a>
+                </p>
+            </div>
+
+            <div class="form-section">
+                <h2>3. Choix chambre et forfait </h2>
+
+                <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
+                Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
+
+                <!-- [case à cocher] Inclure le petit déjeuner s'il-vous-plaît -->
+
+                <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
+                    12.50$
+                    CAN.</p>
+
+            </div>
+
+            <div class="form-section">
+                <h2>4. Identification</h2>
+                <label>Prénom :</label>
+                <input id="prenom" name="prenom">
+
+                <label>Nom :</label>
+                <input id="nom" name="nom">
+
+                <label>Email :</label>
+                <input id="email" name="email">
+
+                <label>Téléphone :</label>
+                <input id="telephone" name="telephone">
+
+            </div>
+
+            <p><button type="submit">Confirmer la réservation</button></p>
+        </form>
+    </main>
+    <hr>
+    <aside>
+        <h2>Nous joindre</h2>
+        <h3>aubergedujacana@gmail.com</h3>
+        <p>
+            Pour toutes demandes d’information, ou pour faire une demande de réservation pour l’un de nos chalets,
+            remplisser le formulaire ci-contre.
+            Si vous préférez, vous pouvez nous contacter par courriel.
+            Afin d’assurer un suivi rapide et efficace, veuillez préciser le chalet désiré, les périodes visées ainsi
+            que le nombre de personnes (adultes et enfants) qui y séjourneront.
+
+        </p>
+    </aside>
+    <footer>
+        <!-- Intégrer les medias sociaux instagram et facebook + un bouton pour partager cette page -->
+        <p>
+            Ce site Web est un projet pédagogique réalisé par
+            <a href="">Prénom et Nom</a> et <a href="">Prénom et Nom</a> dans le cadre du cours 582-204-SF Intégration
+            II,
+            programme des <a href="">Techniques d'intégration multimédia</a>,
+            <a href="">Cégep de Sainte-Foy</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
