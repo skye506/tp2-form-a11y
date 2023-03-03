@@ -74,16 +74,16 @@
                 <fieldset>
                 <legend><h2>4. Identification</h2></legend>
                 <label>Prénom :</label>
-                <input id="prenom" name="prenom" required>
+                <input id="prenom" name="prenom" required maxlength="30" pattern="[a-zA-ZÀ-ÿ \-]+">
 
                 <label>Nom :</label>
-                <input id="nom" name="nom" required>
+                <input id="nom" name="nom" required maxlength="30" pattern="[a-zA-ZÀ-ÿ \-]+">
 
                 <label>Email :</label>
-                <input id="email" name="email" required>
+                <input id="email" name="email" required minlength="15">
 
                 <label>Téléphone :</label>
-                <input id="telephone" name="telephone" required>
+                <input id="telephone" name="telephone" required minlength="10">
                 </fieldset>
             </div>
 
