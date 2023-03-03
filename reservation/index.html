@@ -22,9 +22,11 @@
 
     <main>
         <h1>Réservation</h1>
-        <form id="reservation-form" action="reservation.html">
+            <form id="reservation-form" action="reservation.html">
             <div class="form-section">
-                <h2>1. Vérifier la disponibilité</h2>
+                <fieldset>
+                <legend><h2>1. Vérifier la disponibilité</h2></legend>
+                
                 <label for="date-arrivee">Date d'arrivée :</label>
                 <input type="date" id="date-arrivee" name="date-arrivee">
 
@@ -34,9 +36,11 @@
                 <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
                 <p id="availability-message"></p>
             </div>
+                </fieldset>    
 
             <div class="form-section">
-                <h2>2. Nombre de personnes </h2>
+                <fieldset>
+                <legend><h2>2. Nombre de personnes </h2></legend>
                 <label>Adultes (maximum 4):</label>
                 <input id="adultes" name="adultes">
 
@@ -49,9 +53,11 @@
                     2. si vous avez besoin de louer plusieurs chambres, <a href="">contactez-nous directement</a>
                 </p>
             </div>
+                </fieldset>
 
             <div class="form-section">
-                <h2>3. Choix chambre et forfait </h2>
+                <fieldset>
+                <legend><h2>3. Choix chambre et forfait </h2></legend>
 
                 <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
                 Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
@@ -61,11 +67,12 @@
                 <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
                     12.50$
                     CAN.</p>
-
+                </fieldset>
             </div>
-
+                
             <div class="form-section">
-                <h2>4. Identification</h2>
+                <fieldset>
+                <legend><h2>4. Identification</h2></legend>
                 <label>Prénom :</label>
                 <input id="prenom" name="prenom">
 
@@ -77,11 +84,13 @@
 
                 <label>Téléphone :</label>
                 <input id="telephone" name="telephone">
-
+                </fieldset>
             </div>
 
             <p><button type="submit">Confirmer la réservation</button></p>
+    
         </form>
+
     </main>
     <hr>
     <aside>
