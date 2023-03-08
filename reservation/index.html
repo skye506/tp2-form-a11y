@@ -18,6 +18,25 @@
         </a>
         <!-- Ajouter un menu : Accueil, Historique, Région, Contact, Réservation -->
         <p> <a href="../index.html">accueil</a> | <a href="index.html">réservation</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list-item">
+                        <a href="index.html" class="nav__link nav__link--active">Accueil</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#" class="nav__link">Historique</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#" class="nav__link">Région</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="reservation/index.html" class="nav__link">Réservation</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
     </header>
 
     <main>
@@ -64,15 +83,17 @@
 
                 <!-- [case à cocher] Inclure le petit déjeuner s'il-vous-plaît -->
                 <input type="radio"  name="chambre" value="simple">
-                <label for="simple">chambre simple <img src="../images/types-de-chambre/1-lit-double.webp"></label>
+                <label for="simple">chambre simple <img src="../images/types-de-chambre/1-lit-double.webp"></label>
+                <span class="produit" chambre simple></span>
 
 
-                <input type="radio" name="chambre" value="double">
-                <label for="double">chambre double<img src="../images/types-de-chambre/2-lits-double.jpg"></label>
+                <input type="radio" name="chambre" value="double">
+                <label for="double">chambre double<img src="../images/types-de-chambre/2-lits-double.jpg"></label>
+                <span class="produit" chambre double></span>
 
-                <input type="radio" name="chambre" value="familiale">
-                <label for="familiale">chambre familiale  <img src="../images/types-de-chambre/chambre-familiale.jpg"></label>
-
+                <input type="radio" name="chambre" value="familiale">
+                <label for="familiale">chambre familiale  <img src="../images/types-de-chambre/chambre-familiale.jpg"></label>
+                <span class="produit" chambre familiale></span>
 
                 <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
                     12.50$
