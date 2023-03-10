@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grille pour le gabarit de mise en page */
+.ctnGrille {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+
+    .ctnGrille {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "a a a a a a a a a a a a"
+            ". b b b c c c c c c c ."
+            "d d d d d d d d d d d d";
+        gap: 2rem;
+    }
+
+    header {
+        grid-area: a;
+    }
+
+    aside,
+    blockquote {
+        grid-area: b;
+        background-color: var(--couleur-form);
+        padding: 0 1rem;
+    }
+
+
+    main {
+        grid-area: c;
+    }
+
+    footer {
+        grid-area: d;
+    }
+}
+
+/* Grille pour la signature */
+.signature {
+    text-decoration: none;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "z v ."
+        "w v y"
+        ". v x";
+}
+
+@media screen and (min-width: 600px) {
+    .signature {
+        font-size: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.signature__logo {
+    max-width: 100px;
+    transition: all 0.3s ease-in-out;
+    filter: drop-shadow(2px 2px 2px #000);
+    grid-area: v;
+
+}
+
+@media screen and (min-width: 600px) {
+    .signature__logo {
+        max-width: 150px;
+    }
+}
+
+.signature span:nth-of-type(1) {
+    grid-area: z;
+    text-align: right;
+    margin-right: -1rem;
+}
+
+.signature span:nth-of-type(2) {
+    grid-area: w;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.signature span:nth-of-type(3) {
+    grid-area: y;
+    margin-left: 1rem;
+    font-weight: bold;
+    color: var(--couleur-bleu-jacana);
+}
+
+.signature span:nth-of-type(3)::first-letter {
+    color: var(--couleur-brun-jacana);
+}
+
+.signature span:nth-of-type(4) {
+    grid-area: x;
+    margin-left: -0.25rem;
+}
+
+@media screen and (min-width: 600px) {
+    .signature span:nth-of-type(4) {
+        margin-left: -1rem;
+    }
+}
+
+/* Couleurs de la signature */
+
+.signature:link {
+    color: rgb(172, 112, 39);
+}
+
+.signature:visited {
+    color: rgb(172, 112, 39);
+}
+
+.signature:hover {
+    color: green;
+}
+
+.signature:focus {
+    outline: none;
+    box-shadow: none;
+}
