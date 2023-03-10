@@ -1,0 +1,297 @@
+
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Roboto+Slab:wght@100;300;400&display=swap');
+
+@import url(normalize.css);
+@import url(utilitaires.css);
+@import url(typo.css);
+@import url(grille.css);
+@import url(composants/menu.css);
+
+
+/**
+ * Base commune aux pages
+ * Base formulaire Réservation
+ * Signature : voir fichier grille.css
+ * Dates arrivée et départ
+ * Nombre de personnes
+ * Choix Chambres
+ * Styler le focus
+ * Gestion des erreurs 
+ **/
+
+
+/* Base commune aux pages */
+header,
+footer {
+    background-color: black;
+    margin: -1.5rem -2rem;
+    padding: 2rem 2rem;
+}
+
+@media (min-width:600px) {
+
+    header,
+    footer {
+        padding: 4rem;
+    }
+}
+
+footer {
+    background-color: var(--couleur-form);
+    margin: 2rem -2rem -2rem;
+    /* -2rem pour compenser le padding du main */
+}
+
+/* Signature */
+/* le logo et titre du site 
+sont stylés dans le fichier grille */
+
+/* Couleurs */
+.jacana-brun {
+    color: var(--couleur-brun-jacana);
+}
+
+.jacana-bleu {
+    color: var(--couleur-bleu-jacana);
+}
+
+/* Base formulaire Réservation */
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+fieldset fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+}
+
+legend {
+    padding: 0 0.5rem;
+}
+
+fieldset fieldset legend {
+    padding: 0.5rem;
+}
+
+fieldset h2 {
+    margin: 0;
+}
+
+select {
+    border-radius: 5px;
+    margin: 0 0.25rem
+}
+
+button {
+    background-color: var(--couleur-bouton);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--couleur-bouton-hover);
+    box-shadow: var(--bouton-box-shadow);
+}
+
+/* Dates arrivée et départ */
+.disponibilite__dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+    .disponibilite__dates {
+        flex-direction: row;
+    }
+}
+
+.disponibilite__dates fieldset {
+    border: none;
+}
+
+.disponibilite__date {
+    display: flex;
+    align-items: baseline;
+    width: 45%;
+}
+
+.disponibilite h3,
+.disponibilite p {
+    margin: 0;
+}
+
+.disponibilite .disponibilite__check,
+.disponibilite .erreur {
+    margin-top: 2rem;
+}
+
+/* Nombre de personnes */
+.nombre-personnes__info {
+    display: block;
+    font-size: smaller;
+    font-weight: 300;
+}
+
+.nombre-personnes .row {
+    justify-content: space-between;
+}
+
+.nombre-personnes__selon-age {
+    background-color: var(--couleur-form);
+    font-weight: 800;
+
+    flex-basis: 49%;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+input[type="number"] {
+    padding: 1px 0px 1px 3px;
+    width: 3rem;
+    text-align: center;
+
+}
+
+.soumettre,
+.disponibilite__check {
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .soumettre {
+        text-align: left;
+    }
+
+    [type="submit"] {
+        margin-left: 2rem;
+    }
+}
+
+/* Choix Chambres */
+
+.prix {
+    display: block;
+}
+
+.forfait img {
+    width: 100%;
+}
+
+.forfait .row {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+    .forfait .row {
+        display: flex;
+    }
+}
+
+.forfait__li {
+    flex-basis: 33%;
+    margin: 0.25rem;
+}
+
+.forfait__li img {
+    filter: grayscale();
+}
+
+.forfait__li [type="radio"]+label {
+    display: block;
+    padding: 1rem;
+}
+
+.forfait__li [type="radio"]:focus+label,
+.forfait__li [type="radio"]:checked+label {
+    background-color: var(--couleur-form);
+    font-weight: bold;
+}
+
+.forfait__li [type="radio"]:focus+label img,
+.forfait__li [type="radio"]:checked+label img,
+.forfait__li [type="radio"]:hover+label img {
+    filter: none;
+}
+
+.case-a-cocher [type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.case-a-cocher p:first-of-type {
+    background-color: var(--couleur-form);
+    border-radius: 5px;
+    padding: 0.5rem 1rem 0.5rem;
+    display: inline-block;
+
+}
+
+/* Identification */
+.identification label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* Styler le focus */
+/* https://css-tricks.com/having-a-little-fun-with-custom-focus-styles/ */
+input:focus,
+textarea:focus,
+keygen:focus,
+select:focus {
+    outline-offset: 3px;
+}
+
+:focus {
+    /* outline: 5px auto purple; */
+    outline: none;
+    box-shadow: 2px 2px 1px 1px lightskyblue;
+}
+
+button:focus {
+    box-shadow: var(--bouton-box-shadow);
+}
+
+/* Gestion des erreurs */
+.erreur {
+    /* display: none; */
+}
+
+.icone {
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    background-image: url("../images/icones/good-warning-error.png");
+    background-size: cover;
+    position: relative;
+    top: 5px;
+}
+
+.icone--ok {
+    background-position: 0 0;
+}
+
+.icone--avertissement {
+    background-position: 49px 0;
+}
+
+.icone--erreur {
+    background-position: 101px 0;
+}
+
