@@ -131,6 +131,8 @@ form button:hover {
 @media (min-width: 600px) {
     .disponibilite__dates {
         flex-direction: row;
+        display:flex;
+        flex-direction: row;
     }
 }
 
@@ -189,6 +191,7 @@ input[type="number"] {
 @media screen and (min-width: 600px) {
     .soumettre {
         text-align: left;
+        flex-direction: row;
     }
 
     [type="submit"] {
@@ -261,6 +264,7 @@ input[type="number"] {
 .identification label {
     display: block;
     margin-bottom: 0.5rem;
+    flex-direction: row;
 }
 
 
