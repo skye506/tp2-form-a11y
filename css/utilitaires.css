@@ -10,7 +10,7 @@
     --couleur-bouton: rgba(134, 91, 241, 0.853);
     /* --couleur-bouton-hover: azure; */
     --couleur-bouton-hover: var(--couleur-bleu-jacana);
-    --couleur-bleu-jacana: rgb(6, 6, 6);
+    --couleur-bleu-jacana: rgba(199, 56, 247, 0.789);
     --couleur-brun-jacana: rgb(120, 76, 76);
 
     --police-titre: 'News Cycle', sans-serif;
