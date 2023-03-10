@@ -5,12 +5,12 @@
 :root {
     --bouton-box-shadow: 5px 5px 5px;
 
-    --couleur-titres-h1-h3: var(--nav-background-color);
-    --couleur-form: #cccccc8f;
-    --couleur-bouton: lightskyblue;
+    --couleur-titres-h1-h3:rgba(134, 91, 241, 0.853);
+    --couleur-form: #cccccc2f;
+    --couleur-bouton: rgba(134, 91, 241, 0.853);
     /* --couleur-bouton-hover: azure; */
     --couleur-bouton-hover: var(--couleur-bleu-jacana);
-    --couleur-bleu-jacana: rgb(6, 155, 248);
+    --couleur-bleu-jacana: rgb(251, 250, 250);
     --couleur-brun-jacana: rgb(120, 76, 76);
 
     --police-titre: 'News Cycle', sans-serif;
@@ -20,7 +20,7 @@
     --nav-color: white;
     --nav-hover-color: #fff;
     --nav-hover-background-color: var(--couleur-bleu-jacana);
-    --nav-border-color: rgba(101, 68, 180, 1);
+    --nav-border-color: rgba(134, 101, 212, 0.747);
 }
 
 /*** Clearfix ***/

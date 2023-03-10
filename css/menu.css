@@ -76,7 +76,7 @@
 /* Liens du menu */
 .nav__link {
     color: var(--nav-color);
-    background-color: rgba(145, 0, 145, 0.2);
+    background-color: rgba(38, 38, 38, 0.599);
     display: block;
     padding: 5px 10px;
     width: 100%;
