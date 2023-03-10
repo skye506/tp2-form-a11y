@@ -24,12 +24,26 @@
 
 
 /* Base commune aux pages */
+
+/* logo du menu */
+.logo{
+    width: 200px;
+    justify-items: center;
+    justify-content: center;
+}
+
+
+.header{
+    justify-content: center;
+    width: 200px;
+}
+
 header,
 footer {
     background-color: rgba(3, 155, 250, 0.483);
     margin: -1.5rem -2rem;
     padding: 2rem 2rem;
-    justify-content: flex-end;
+    align-content: center;
 }
 
 @media (min-width:600px) {
@@ -37,6 +51,7 @@ footer {
     header,
     footer {
         padding: 4rem;
+        align-items: center;
     }
 }
 
